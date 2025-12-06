@@ -1,0 +1,2707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WORTSCHATZ — German B1 Vocabulary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bisque: #E8DDD0;
+  --bisque-light: #F2EBE3;
+  --terracotta: #D4B5A0;
+  --clay: #A0816A;
+  --porcelain: #FAFAF8;
+  --concrete: #8B8680;
+  --charcoal: #3C3835;
+  --blue: #7EBDC3;
+  --blue-light: #9FD0D4;
+  --blue-pale: #E5F3F4;
+  --blue-dark: #5DA8AE;
+  --correct: #5D7A5D;
+  --correct-pale: #EEF3EE;
+  --incorrect: #9E5A4A;
+  --incorrect-pale: #F5EEEC;
+  --font: 'Noto Sans JP', sans-serif;
+  --shadow: 0 2px 8px rgba(60,56,53,0.08);
+  --shadow-lg: 0 8px 24px rgba(60,56,53,0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  background: var(--bisque);
+  color: var(--charcoal);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: rgba(250,250,248,0.95);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.nav-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--blue);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: white;
+  stroke-width: 1.5;
+}
+
+.nav-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-link {
+  padding: 8px 14px;
+  font-size: 0.875rem;
+  color: var(--concrete);
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.15s, background 0.15s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--blue);
+  background: var(--blue-pale);
+}
+
+.btn-lessons {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  background: var(--blue);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.btn-lessons:hover {
+  background: var(--blue-dark);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 88px 24px 48px;
+}
+
+/* HOME */
+.home-view { animation: fadeIn 0.3s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+  text-align: center;
+  padding: 48px 0 40px;
+}
+
+.hero-accent {
+  width: 40px;
+  height: 3px;
+  background: var(--blue);
+  margin: 0 auto 24px;
+  border-radius: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--blue);
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: var(--concrete);
+  font-weight: 300;
+  max-width: 420px;
+  margin: 0 auto 20px;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  font-size: 0.875rem;
+  color: var(--clay);
+}
+
+.hero-stats .dot {
+  width: 4px;
+  height: 4px;
+  background: var(--terracotta);
+  border-radius: 50%;
+  align-self: center;
+}
+
+/* MODE CARDS */
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.mode-card {
+  background: var(--porcelain);
+  border-radius: 12px;
+  padding: 32px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+
+.mode-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--blue-light);
+}
+
+.mode-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--bisque-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: background 0.15s;
+}
+
+.mode-card:hover .mode-icon {
+  background: var(--blue-pale);
+}
+
+.mode-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--clay);
+  stroke-width: 1.5;
+  fill: none;
+  transition: stroke 0.15s;
+}
+
+.mode-card:hover .mode-icon svg {
+  stroke: var(--blue);
+}
+
+.mode-card h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.mode-card p {
+  font-size: 0.875rem;
+  color: var(--concrete);
+  line-height: 1.5;
+}
+
+/* STUDY VIEWS */
+.study-view {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.study-view.active { display: block; }
+
+.view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.view-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.view-title h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.view-badge {
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--blue-pale);
+  color: var(--blue);
+  border-radius: 12px;
+}
+
+.btn-back {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 0.875rem;
+  color: var(--concrete);
+  background: none;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.btn-back:hover {
+  color: var(--charcoal);
+  border-color: var(--charcoal);
+}
+
+.btn-back svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* FLASHCARD */
+.flashcard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.flashcard-wrapper {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.flashcard {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.flashcard.flipped { transform: rotateY(180deg); }
+
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  background: var(--porcelain);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+}
+
+.flashcard-back { transform: rotateY(180deg); }
+
+.flashcard-label {
+  position: absolute;
+  top: 20px;
+  padding: 4px 10px;
+  font-size: 0.625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 10px;
+}
+
+.flashcard-front .flashcard-label {
+  background: var(--blue-pale);
+  color: var(--blue);
+}
+
+.flashcard-back .flashcard-label {
+  background: rgba(160,129,106,0.15);
+  color: var(--clay);
+}
+
+.flashcard-word {
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  font-weight: 500;
+  text-align: center;
+}
+
+.flashcard-hint {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--concrete);
+}
+
+.flashcard-hint svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.flashcard-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-btn {
+  width: 44px;
+  height: 44px;
+  background: var(--porcelain);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.nav-btn:hover {
+  background: var(--blue-pale);
+  border-color: var(--blue-light);
+}
+
+.nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.nav-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--charcoal);
+  stroke-width: 2;
+  fill: none;
+}
+
+.flashcard-counter {
+  font-size: 0.875rem;
+  color: var(--concrete);
+}
+
+.flashcard-counter span:first-child {
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+.progress-container { width: 100%; max-width: 480px; }
+
+.progress-bar {
+  height: 4px;
+  background: var(--bisque-light);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--blue);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.flashcard-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  color: var(--concrete);
+  background: var(--porcelain);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.control-btn:hover {
+  color: var(--charcoal);
+  border-color: var(--charcoal);
+}
+
+.control-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+/* MATCH */
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: var(--porcelain);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.match-stats {
+  display: flex;
+  gap: 32px;
+}
+
+.match-stat { text-align: center; }
+
+.match-stat-value {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+.match-stat-label {
+  font-size: 0.75rem;
+  color: var(--concrete);
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--blue);
+  background: transparent;
+  border: 1px solid var(--blue);
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.btn-secondary:hover {
+  background: var(--blue-pale);
+}
+
+.match-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.match-card {
+  background: var(--porcelain);
+  border-radius: 10px;
+  padding: 20px 16px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-shadow: var(--shadow);
+  position: relative;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+.match-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.match-card.selected {
+  border-color: var(--blue);
+  background: var(--blue-pale);
+}
+
+.match-card.correct {
+  border-color: var(--correct);
+  background: var(--correct-pale);
+}
+
+.match-card.incorrect {
+  border-color: var(--incorrect);
+  background: var(--incorrect-pale);
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.match-card.matched {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.match-card-lang {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 0.5625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.match-card-lang.de {
+  background: var(--blue-pale);
+  color: var(--blue);
+}
+
+.match-card-lang.en {
+  background: rgba(160,129,106,0.15);
+  color: var(--clay);
+}
+
+.match-card-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  word-break: break-word;
+}
+
+.match-complete {
+  display: none;
+  text-align: center;
+  padding: 48px;
+  background: var(--porcelain);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.match-complete.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.match-complete h3 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.match-final-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+.match-final-stat { text-align: center; }
+
+.match-final-value {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--blue);
+}
+
+.match-final-label {
+  font-size: 0.875rem;
+  color: var(--concrete);
+}
+
+.btn-primary {
+  padding: 12px 24px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: white;
+  background: var(--blue);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.btn-primary:hover {
+  background: var(--blue-dark);
+}
+
+/* QUIZ */
+.quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quiz-progress { margin-bottom: 32px; }
+
+.quiz-progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--concrete);
+  margin-bottom: 8px;
+}
+
+.quiz-card {
+  background: var(--porcelain);
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: var(--shadow);
+}
+
+.quiz-prompt {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: var(--bisque-light);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.quiz-option:hover:not(:disabled) {
+  border-color: var(--blue-light);
+  background: var(--blue-pale);
+}
+
+.quiz-option:disabled { cursor: default; }
+
+.quiz-option.correct {
+  border-color: var(--correct);
+  background: var(--correct-pale);
+}
+
+.quiz-option.incorrect {
+  border-color: var(--incorrect);
+  background: var(--incorrect-pale);
+}
+
+.quiz-option-num {
+  width: 28px;
+  height: 28px;
+  background: var(--porcelain);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--concrete);
+  flex-shrink: 0;
+}
+
+.quiz-option.correct .quiz-option-num {
+  background: var(--correct);
+  color: white;
+}
+
+.quiz-option.incorrect .quiz-option-num {
+  background: var(--incorrect);
+  color: white;
+}
+
+.quiz-option-text {
+  font-size: 1rem;
+}
+
+.quiz-results {
+  display: none;
+  text-align: center;
+  padding: 48px 32px;
+  background: var(--porcelain);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.quiz-results.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.quiz-score {
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.quiz-message {
+  font-size: 1.25rem;
+  color: var(--concrete);
+  margin-bottom: 32px;
+}
+
+.quiz-missed {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.quiz-missed h4 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--concrete);
+  margin-bottom: 16px;
+}
+
+.quiz-missed-item {
+  padding: 12px 16px;
+  background: var(--bisque-light);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 0.9375rem;
+}
+
+.quiz-missed-item span {
+  color: var(--concrete);
+}
+
+.quiz-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* TYPING */
+.typing-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.typing-progress { margin-bottom: 32px; }
+
+.typing-progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--concrete);
+  margin-bottom: 8px;
+}
+
+.typing-card {
+  background: var(--porcelain);
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: var(--shadow);
+}
+
+.typing-prompt {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.typing-input-wrapper {
+  margin-bottom: 20px;
+}
+
+.typing-input {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1.125rem;
+  font-family: inherit;
+  background: var(--bisque-light);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.typing-input:focus {
+  border-color: var(--blue);
+  background: var(--blue-pale);
+}
+
+.typing-input.correct {
+  border-color: var(--correct);
+  background: var(--correct-pale);
+}
+
+.typing-input.incorrect {
+  border-color: var(--incorrect);
+  background: var(--incorrect-pale);
+}
+
+.typing-feedback {
+  margin-top: 12px;
+  font-size: 0.9375rem;
+  text-align: center;
+  min-height: 24px;
+}
+
+.typing-feedback.correct {
+  color: var(--correct);
+}
+
+.typing-feedback.incorrect {
+  color: var(--incorrect);
+}
+
+.umlaut-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.umlaut-btn {
+  width: 44px;
+  height: 44px;
+  font-size: 1.125rem;
+  font-family: inherit;
+  background: var(--bisque-light);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.umlaut-btn:hover {
+  background: var(--blue-pale);
+  border-color: var(--blue-light);
+}
+
+.typing-submit {
+  width: 100%;
+  padding: 14px 24px;
+}
+
+.typing-results {
+  display: none;
+  text-align: center;
+  padding: 48px 32px;
+  background: var(--porcelain);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.typing-results.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.typing-final-score {
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.typing-message {
+  font-size: 1.25rem;
+  color: var(--concrete);
+  margin-bottom: 32px;
+}
+
+/* MODALS */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(60,56,53,0.4);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 24px;
+}
+
+.modal-backdrop.active { display: flex; }
+
+.modal {
+  background: var(--porcelain);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 560px;
+  max-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.modal-header h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.modal-close {
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--concrete);
+  transition: background 0.15s, color 0.15s;
+}
+
+.modal-close:hover {
+  background: var(--bisque-light);
+  color: var(--charcoal);
+}
+
+.modal-close svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+/* LESSON SELECTOR */
+.lesson-group { margin-bottom: 24px; }
+
+.lesson-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.lesson-group-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--concrete);
+}
+
+.lesson-group-toggle {
+  font-size: 0.75rem;
+  color: var(--blue);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.lesson-group-toggle:hover { text-decoration: underline; }
+
+.lesson-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lesson-chip {
+  padding: 8px 14px;
+  font-size: 0.8125rem;
+  color: var(--charcoal);
+  background: var(--bisque-light);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.lesson-chip:hover {
+  border-color: var(--blue-light);
+}
+
+.lesson-chip.selected {
+  background: var(--blue-pale);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.lesson-chip-count {
+  font-size: 0.6875rem;
+  padding: 2px 6px;
+  background: rgba(0,0,0,0.06);
+  border-radius: 10px;
+}
+
+.lesson-chip.selected .lesson-chip-count {
+  background: var(--blue);
+  color: white;
+}
+
+.lesson-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.lesson-action-btn {
+  font-size: 0.8125rem;
+  color: var(--blue);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.lesson-action-btn:hover { text-decoration: underline; }
+
+/* SETTINGS */
+.settings-section {
+  margin-bottom: 24px;
+}
+
+.settings-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--concrete);
+  margin-bottom: 12px;
+}
+
+.settings-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.settings-option {
+  padding: 10px 18px;
+  font-size: 0.875rem;
+  color: var(--charcoal);
+  background: var(--bisque-light);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.settings-option:hover {
+  border-color: var(--blue-light);
+}
+
+.settings-option.selected {
+  background: var(--blue-pale);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .nav-inner { padding: 0 16px; }
+  .container { padding: 80px 16px 32px; }
+  .hero { padding: 32px 0; }
+  .match-header { flex-direction: column; gap: 16px; }
+  .match-stats { gap: 24px; }
+  .modal { max-height: 90vh; }
+  .quiz-card { padding: 24px 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand" onclick="showHome(); return false;">
+        <div class="nav-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 8c0-2 2-4 7-4s7 2 7 4"/>
+            <path d="M5 8v8c0 3 3 4 7 4s7-1 7-4V8"/>
+            <path d="M5 12c0 1 2 2 7 2s7-1 7-2"/>
+          </svg>
+        </div>
+        <span class="nav-title">Wortschatz</span>
+      </a>
+      <div class="nav-actions">
+        <button class="nav-link active" onclick="showHome()">Home</button>
+        <button class="btn-lessons" onclick="openLessonSelector()">Select Lessons</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div id="homeView" class="home-view">
+      <section class="hero">
+        <div class="hero-accent"></div>
+        <h1 style="color: var(--blue);">GERM 203 Vocab Review</h1>
+        <p class="hero-subtitle"></p>
+        <div class="hero-stats">
+          <span id="totalWords">448 words</span>
+          <span class="dot"></span>
+          <span>18 lessons</span>
+          <span class="dot"></span>
+          <span id="selectedInfo">All selected</span>
+        </div>
+      </section>
+
+      <div class="mode-grid">
+        <div class="mode-card" onclick="startMode('flashcard')">
+          <div class="mode-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2c-4 4-6 8-6 11a6 6 0 0012 0c0-3-2-7-6-11z"/>
+              <path d="M12 22c-2 0-3-1-3-3 0-1.5 1-3 3-5 2 2 3 3.5 3 5 0 2-1 3-3 3z"/>
+            </svg>
+          </div>
+          <h3>Flashcards</h3>
+          <p>Flip through cards to memorize vocabulary.</p>
+        </div>
+
+        <div class="mode-card" onclick="startMode('match')">
+          <div class="mode-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" stroke-dasharray="4 2"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="12" cy="12" r="1"/>
+            </svg>
+          </div>
+          <h3>Match</h3>
+          <p>Pair German words with their English translations.</p>
+        </div>
+
+        <div class="mode-card" onclick="startMode('quiz')">
+          <div class="mode-icon">
+            <svg viewBox="0 0 24 24">
+              <ellipse cx="12" cy="8" rx="9" ry="3"/>
+              <path d="M3 8c0 4 4 8 9 8s9-4 9-8"/>
+              <path d="M7 18l-2 3"/>
+              <path d="M17 18l2 3"/>
+            </svg>
+          </div>
+          <h3>Quiz</h3>
+          <p>Test your knowledge with multiple choice questions.</p>
+        </div>
+
+        <div class="mode-card" onclick="startMode('typing')">
+          <div class="mode-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="4" width="20" height="14" rx="2" ry="2"/>
+              <path d="M6 10h1M9 10h1M12 10h1M15 10h1M18 10h1"/>
+              <path d="M7 14h10"/>
+              <path d="M6 7h1M9 7h1M12 7h1M15 7h1M18 7h1"/>
+            </svg>
+          </div>
+          <h3>Typing</h3>
+          <p>Type the correct translation from memory. Includes special character buttons for German umlauts.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="flashcardView" class="study-view">
+      <div class="view-header">
+        <div class="view-title">
+          <h2>Flashcards</h2>
+          <span class="view-badge" id="flashcardBadge">0 words</span>
+        </div>
+        <button class="btn-back" onclick="showHome()">
+          <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back
+        </button>
+      </div>
+
+      <div class="flashcard-container">
+        <div class="flashcard-wrapper">
+          <div class="flashcard" id="flashcard" onclick="flipCard()">
+            <div class="flashcard-face flashcard-front">
+              <span class="flashcard-label">German</span>
+              <div class="flashcard-word" id="flashcardFront"></div>
+              <div class="flashcard-hint">
+                <svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11v-1a4 4 0 014-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v1a4 4 0 01-4 4H3"/></svg>
+                Click to flip
+              </div>
+            </div>
+            <div class="flashcard-face flashcard-back">
+              <span class="flashcard-label">English</span>
+              <div class="flashcard-word" id="flashcardBack"></div>
+              <div class="flashcard-hint">
+                <svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11v-1a4 4 0 014-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v1a4 4 0 01-4 4H3"/></svg>
+                Click to flip
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flashcard-nav">
+          <button class="nav-btn" id="prevBtn" onclick="prevCard()">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="flashcard-counter">
+            <span id="currentIndex">1</span> / <span id="totalCards">0</span>
+          </div>
+          <button class="nav-btn" id="nextBtn" onclick="nextCard()">
+            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <div class="flashcard-controls">
+          <button class="control-btn" onclick="shuffleCards()">
+            <svg viewBox="0 0 24 24"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+            Shuffle
+          </button>
+          <button class="control-btn" onclick="toggleDirection()">
+            <svg viewBox="0 0 24 24"><path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"/></svg>
+            <span id="directionText">DE → EN</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="matchView" class="study-view">
+      <div class="view-header">
+        <div class="view-title">
+          <h2>Match</h2>
+          <span class="view-badge" id="matchBadge">0 pairs</span>
+        </div>
+        <button class="btn-back" onclick="showHome()">
+          <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back
+        </button>
+      </div>
+
+      <div class="match-header">
+        <div class="match-stats">
+          <div class="match-stat">
+            <div class="match-stat-value" id="matchPairs">0</div>
+            <div class="match-stat-label">Pairs Found</div>
+          </div>
+          <div class="match-stat">
+            <div class="match-stat-value" id="matchMoves">0</div>
+            <div class="match-stat-label">Moves</div>
+          </div>
+          <div class="match-stat">
+            <div class="match-stat-value" id="matchTime">0:00</div>
+            <div class="match-stat-label">Time</div>
+          </div>
+        </div>
+        <button class="btn-secondary" onclick="openMatchSettings()">New Game</button>
+      </div>
+
+      <div class="match-grid" id="matchGrid"></div>
+
+      <div class="match-complete" id="matchComplete">
+        <h3>Well Done</h3>
+        <div class="match-final-stats">
+          <div class="match-final-stat">
+            <div class="match-final-value" id="finalTime">0:00</div>
+            <div class="match-final-label">Time</div>
+          </div>
+          <div class="match-final-stat">
+            <div class="match-final-value" id="finalMoves">0</div>
+            <div class="match-final-label">Moves</div>
+          </div>
+        </div>
+        <button class="btn-primary" onclick="openMatchSettings()">Play Again</button>
+      </div>
+    </div>
+
+    <div id="quizView" class="study-view">
+      <div class="view-header">
+        <div class="view-title">
+          <h2>Quiz</h2>
+          <span class="view-badge" id="quizBadge">0 questions</span>
+        </div>
+        <button class="btn-back" onclick="showHome()">
+          <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back
+        </button>
+      </div>
+
+      <div class="quiz-container">
+        <div class="quiz-progress">
+          <div class="quiz-progress-text">
+            <span>Question <span id="quizCurrent">1</span> of <span id="quizTotal">10</span></span>
+            <span id="quizScore">0 correct</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="quizProgressFill"></div>
+          </div>
+        </div>
+
+        <div class="quiz-card" id="quizCard">
+          <div class="quiz-prompt" id="quizPrompt"></div>
+          <div class="quiz-options" id="quizOptions"></div>
+        </div>
+
+        <div class="quiz-results" id="quizResults">
+          <div class="quiz-score" id="quizFinalScore">0%</div>
+          <div class="quiz-message" id="quizMessage">Keep practicing!</div>
+          <div class="quiz-actions">
+            <button class="btn-secondary" onclick="showHome()">Back to Home</button>
+            <button class="btn-primary" onclick="openQuizSettings()">Try Again</button>
+          </div>
+          <div class="quiz-missed" id="quizMissed">
+            <h4>Words to review:</h4>
+            <div id="quizMissedList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="typingView" class="study-view">
+      <div class="view-header">
+        <div class="view-title">
+          <h2>Typing</h2>
+          <span class="view-badge" id="typingBadge">0 questions</span>
+        </div>
+        <button class="btn-back" onclick="showHome()">
+          <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back
+        </button>
+      </div>
+
+      <div class="typing-container">
+        <div class="typing-progress">
+          <div class="typing-progress-text">
+            <span>Question <span id="typingCurrent">1</span> of <span id="typingTotal">10</span></span>
+            <span id="typingScore">0 correct</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="typingProgressFill"></div>
+          </div>
+        </div>
+
+        <div class="typing-card" id="typingCard">
+          <div class="typing-prompt" id="typingPrompt"></div>
+          <div class="typing-input-wrapper">
+            <input type="text" class="typing-input" id="typingInput" placeholder="Type your answer..." autocomplete="off" autocapitalize="off" spellcheck="false">
+            <div class="typing-feedback" id="typingFeedback"></div>
+          </div>
+          <div class="umlaut-buttons">
+            <button class="umlaut-btn" onclick="insertUmlaut('ä')">ä</button>
+            <button class="umlaut-btn" onclick="insertUmlaut('ö')">ö</button>
+            <button class="umlaut-btn" onclick="insertUmlaut('ü')">ü</button>
+            <button class="umlaut-btn" onclick="insertUmlaut('ß')">ß</button>
+            <button class="umlaut-btn" onclick="insertUmlaut('Ä')">Ä</button>
+            <button class="umlaut-btn" onclick="insertUmlaut('Ö')">Ö</button>
+            <button class="umlaut-btn" onclick="insertUmlaut('Ü')">Ü</button>
+          </div>
+          <button class="btn-primary typing-submit" id="typingSubmit" onclick="submitTyping()">Check Answer</button>
+        </div>
+
+        <div class="typing-results" id="typingResults">
+          <div class="typing-final-score" id="typingFinalScore">0%</div>
+          <div class="typing-message" id="typingMessage">Keep practicing!</div>
+          <div class="quiz-actions">
+            <button class="btn-secondary" onclick="showHome()">Back to Home</button>
+            <button class="btn-primary" onclick="openTypingSettings()">Try Again</button>
+          </div>
+          <div class="quiz-missed" id="typingMissed">
+            <h4>Words to review:</h4>
+            <div id="typingMissedList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lesson Modal -->
+  <div class="modal-backdrop" id="lessonModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Select Lessons</h3>
+        <button class="modal-close" onclick="closeLessonSelector()">
+          <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="lesson-actions">
+          <button class="lesson-action-btn" onclick="selectAllLessons()">Select all</button>
+          <button class="lesson-action-btn" onclick="deselectAllLessons()">Deselect all</button>
+        </div>
+        <div id="lessonGroups"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-primary" onclick="closeLessonSelector()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Match Settings Modal -->
+  <div class="modal-backdrop" id="matchSettingsModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Match Settings</h3>
+        <button class="modal-close" onclick="closeMatchSettings()">
+          <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="settings-section">
+          <div class="settings-label">Number of pairs</div>
+          <div class="settings-options" id="matchPairOptions">
+            <button class="settings-option" data-pairs="4">4</button>
+            <button class="settings-option selected" data-pairs="6">6</button>
+            <button class="settings-option" data-pairs="8">8</button>
+            <button class="settings-option" data-pairs="10">10</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeMatchSettings()">Cancel</button>
+        <button class="btn-primary" onclick="startMatch()">Start Game</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quiz Settings Modal -->
+  <div class="modal-backdrop" id="quizSettingsModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Quiz Settings</h3>
+        <button class="modal-close" onclick="closeQuizSettings()">
+          <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="settings-section">
+          <div class="settings-label">Number of questions</div>
+          <div class="settings-options" id="quizCountOptions">
+            <button class="settings-option selected" data-count="10">10</button>
+            <button class="settings-option" data-count="20">20</button>
+            <button class="settings-option" data-count="all">All</button>
+          </div>
+        </div>
+        <div class="settings-section">
+          <div class="settings-label">Direction</div>
+          <div class="settings-options" id="quizDirOptions">
+            <button class="settings-option selected" data-dir="de-en">German → English</button>
+            <button class="settings-option" data-dir="en-de">English → German</button>
+            <button class="settings-option" data-dir="mixed">Mixed</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeQuizSettings()">Cancel</button>
+        <button class="btn-primary" onclick="startQuiz()">Start Quiz</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Typing Settings Modal -->
+  <div class="modal-backdrop" id="typingSettingsModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Typing Settings</h3>
+        <button class="modal-close" onclick="closeTypingSettings()">
+          <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="settings-section">
+          <div class="settings-label">Number of questions</div>
+          <div class="settings-options" id="typingCountOptions">
+            <button class="settings-option selected" data-count="10">10</button>
+            <button class="settings-option" data-count="20">20</button>
+            <button class="settings-option" data-count="all">All</button>
+          </div>
+        </div>
+        <div class="settings-section">
+          <div class="settings-label">Direction</div>
+          <div class="settings-options" id="typingDirOptions">
+            <button class="settings-option selected" data-dir="de-en">German → English</button>
+            <button class="settings-option" data-dir="en-de">English → German</button>
+            <button class="settings-option" data-dir="mixed">Mixed</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeTypingSettings()">Cancel</button>
+        <button class="btn-primary" onclick="startTyping()">Start Typing</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+// Vocabulary data
+const vocabularyData = {
+  lessons: [
+    {
+      lessonId: "B1_Lektion_1",
+      lessonName: "Lektion 1",
+      vocabulary: [
+        { german: "erkennen", english: "recognize" },
+        { german: "lächeln", english: "smile" },
+        { german: "winken", english: "wave" },
+        { german: "grüßen", english: "greet" },
+        { german: "(un)bekannt", english: "(un)known" },
+        { german: "als ob", english: "as if" },
+        { german: "sich vorstellen", english: "introduce" },
+        { german: "die Vergangenheit", english: "past" },
+        { german: "die Gegenwart", english: "present" },
+        { german: "die Zukunft", english: "future" },
+        { german: "die Jugend", english: "youth" },
+        { german: "der/die Erwachsene", english: "adult" },
+        { german: "das Alter", english: "old age" },
+        { german: "das Erlebnis", english: "experience" },
+        { german: "die Erinnerung", english: "memory" },
+        { german: "das Gefühl", english: "feeling" },
+        { german: "der Geruch", english: "smell" },
+        { german: "wecken", english: "wake up, awaken" },
+        { german: "die Realität", english: "reality" },
+        { german: "verbinden mit", english: "connect with" },
+        { german: "bestätigen", english: "confirm" },
+        { german: "das Zeichen", english: "sign" },
+        { german: "schütteln", english: "shake" },
+        { german: "täglich", english: "daily" },
+        { german: "der Ärger", english: "anger" },
+        { german: "voll", english: "full" },
+        { german: "sich hinsetzen", english: "sit down" },
+        { german: "jedes Mal", english: "every time" },
+        { german: "die Fantasie", english: "fantasy" },
+        { german: "die Glocke", english: "bell" }
+      ]
+    },
+    {
+      lessonId: "B1_Lektion_2",
+      lessonName: "Lektion 2",
+      vocabulary: [
+        { german: "ernst nehmen", english: "take seriously" },
+        { german: "der Zweifel", english: "doubt" },
+        { german: "das WC", english: "toilet" },
+        { german: "der Rand", english: "edge, rim" },
+        { german: "bewundern", english: "admire" },
+        { german: "das Geheimnis", english: "secret" },
+        { german: "der/die Bekannte", english: "acquaintance" },
+        { german: "die Clique", english: "clique" },
+        { german: "der Freundeskreis", english: "friend group" },
+        { german: "die Freundschaft", english: "friendship" },
+        { german: "die Beziehung", english: "relationship" },
+        { german: "das Vertrauen", english: "trust" },
+        { german: "die Liebe", english: "love" },
+        { german: "der Typ", english: "type, guy" },
+        { german: "die Entscheidung", english: "decision" },
+        { german: "darum", english: "therefore" },
+        { german: "mitten", english: "in the middle of" },
+        { german: "intensiv", english: "intensive" },
+        { german: "die Wahrheit", english: "truth" },
+        { german: "umsonst", english: "for free" },
+        { german: "virtuell", english: "virtual" },
+        { german: "dauernd", english: "continuously" },
+        { german: "eng", english: "close" },
+        { german: "spüren", english: "to feel" }
+      ]
+    },
+    {
+      lessonId: "B1_Lektion_3",
+      lessonName: "Lektion 3",
+      vocabulary: [
+        { german: "der Tourismus", english: "tourism" },
+        { german: "der Notfall", english: "emergency" },
+        { german: "die Stärke", english: "strength" },
+        { german: "das Selbstvertrauen", english: "self-confidence" },
+        { german: "vereinbaren", english: "arrange" },
+        { german: "eher", english: "rather" },
+        { german: "schrecklich", english: "horrible" },
+        { german: "die Decke", english: "blanket" },
+        { german: "nass", english: "wet" },
+        { german: "die Fähigkeit", english: "skill" },
+        { german: "seitdem", english: "since" },
+        { german: "der Zuhörer", english: "listener" },
+        { german: "rechnen", english: "calculate" },
+        { german: "vertrauen", english: "trust" },
+        { german: "die Neuigkeit", english: "news" },
+        { german: "parallel", english: "parallel" },
+        { german: "der Zusammenhang", english: "correlation" },
+        { german: "teamfähig", english: "able to work in a team" },
+        { german: "pünktlich", english: "on time" },
+        { german: "zuverlässig", english: "reliable" },
+        { german: "hilfsbereit", english: "helpful" },
+        { german: "gründlich", english: "thorough" },
+        { german: "fleißig", english: "hardworking" },
+        { german: "aufmerksam", english: "attentive" },
+        { german: "geduldig", english: "patient" }
+      ]
+    },
+    {
+      lessonId: "B1_Lektion_4",
+      lessonName: "Lektion 4",
+      vocabulary: [
+        { german: "das Gehirn", english: "brain" },
+        { german: "genügen", english: "be enough" },
+        { german: "tatsächlich", english: "actually" },
+        { german: "die Änderung", english: "change" },
+        { german: "die Energie", english: "energy" },
+        { german: "die Forschung", english: "research" },
+        { german: "der Durchschnitt", english: "average" },
+        { german: "nötig", english: "necessary" },
+        { german: "die Zange", english: "pliers" },
+        { german: "das Vitamin", english: "vitamin" },
+        { german: "die Aussage", english: "statement" },
+        { german: "testen", english: "test" },
+        { german: "die Studie", english: "study" },
+        { german: "der Teilnehmer", english: "participant" },
+        { german: "abschließen", english: "lock" },
+        { german: "das Schloss", english: "lock" },
+        { german: "der Bürger", english: "citizen" },
+        { german: "folgend", english: "following" },
+        { german: "einen Vorsatz haben", english: "have resolutions" },
+        { german: "eine Gewohnheit haben", english: "have a habit" },
+        { german: "sich gewöhnen", english: "get used to" },
+        { german: "wiederholen", english: "repeat" },
+        { german: "sich bewegen", english: "move" },
+        { german: "sich anstrengen", english: "try hard" },
+        { german: "Ausdauer haben", english: "have endurance" }
+      ]
+    },
+    {
+      lessonId: "B1_Lektion_5",
+      lessonName: "Lektion 5",
+      vocabulary: [
+        { german: "die Gemeinschaft", english: "community" },
+        { german: "die Versammlung", english: "assembly" },
+        { german: "die Fortbildung", english: "professional development" },
+        { german: "biologisch", english: "organic" },
+        { german: "besetzt", english: "occupied" },
+        { german: "der Fahrplan", english: "schedule" },
+        { german: "die Ankunft", english: "arrival" },
+        { german: "die Unterkunft", english: "accommodation" },
+        { german: "der Besuch", english: "visit" },
+        { german: "die Bibliothek", english: "library" },
+        { german: "die Landwirtschaft", english: "agriculture" },
+        { german: "der Schlafsaal", english: "dorm" },
+        { german: "aufwachsen", english: "grow up" },
+        { german: "die Diskussion", english: "discussion" },
+        { german: "finanziell", english: "financial" },
+        { german: "das Missverständnis", english: "misunderstanding" },
+        { german: "die Rücksicht", english: "consideration" },
+        { german: "das Blut", english: "blood" },
+        { german: "der Rest", english: "leftovers" },
+        { german: "sich ausruhen", english: "rest" },
+        { german: "schreien", english: "scream" },
+        { german: "der Löwe", english: "lion" },
+        { german: "das Schwein", english: "pig" },
+        { german: "der Hase", english: "rabbit" },
+        { german: "der Affe", english: "monkey" },
+        { german: "die Ente", english: "duck" },
+        { german: "die Fliege", english: "fly" },
+        { german: "die Mücke", english: "mosquito" },
+        { german: "die Schildkröte", english: "turtle" }
+      ]
+    },
+    {
+      lessonId: "B1_Lektion_6",
+      lessonName: "Lektion 6",
+      vocabulary: [
+        { german: "zuschauen", english: "watch" },
+        { german: "aufgeregt", english: "excited" },
+        { german: "der Mut", english: "courage" },
+        { german: "freiberuflich arbeiten", english: "freelance" },
+        { german: "fest angestellt sein", english: "fulltime employed" },
+        { german: "ein Risiko eingehen", english: "take a risk" },
+        { german: "eine Idee umsetzen", english: "implement an idea" },
+        { german: "einen Traum verwirklichen", english: "realize a dream" },
+        { german: "die Wissenschaft", english: "science" },
+        { german: "voneinander", english: "from each other" },
+        { german: "obwohl", english: "even though" },
+        { german: "begegnen", english: "encounter" },
+        { german: "die Hauptstadt", english: "capital" },
+        { german: "aufgeben", english: "give up" },
+        { german: "unabhängig", english: "independent" },
+        { german: "zuständig sein", english: "be responsible for" },
+        { german: "die Sicherheit", english: "security" },
+        { german: "unerträglich", english: "unbearable" },
+        { german: "die Vorschrift", english: "regulation" },
+        { german: "das Gefängnis", english: "jail" },
+        { german: "bewerten", english: "evaluate" }
+      ]
+    },
+    {
+      lessonId: "Lektion_13",
+      lessonName: "Lektion 13",
+      vocabulary: [
+        { german: "typisch", english: "typical" },
+        { german: "der Löffel", english: "spoon" },
+        { german: "fettig", english: "greasy" },
+        { german: "der Abschied", english: "farewell" },
+        { german: "die Schüssel", english: "bowl" },
+        { german: "bitter", english: "bitter" },
+        { german: "scharf", english: "spicy" },
+        { german: "das Glas", english: "glass" },
+        { german: "salzig", english: "salty" },
+        { german: "das Verhalten", english: "behavior" },
+        { german: "der Topf", english: "pot" },
+        { german: "satt", english: "full (not hungry)" },
+        { german: "unmöglich", english: "impossible" },
+        { german: "die Pfanne", english: "pan" },
+        { german: "sich verabschieden", english: "say goodbye" },
+        { german: "der Durst", english: "thirst" },
+        { german: "die Tasse", english: "cup" },
+        { german: "das Öl", english: "oil" },
+        { german: "bemerken", english: "notice" },
+        { german: "das Besteck", english: "silverware" },
+        { german: "die Gabel", english: "fork" },
+        { german: "geben", english: "to give" },
+        { german: "das Salz", english: "salt" },
+        { german: "der Essig", english: "vinegar" },
+        { german: "das Geschirr", english: "dishes" },
+        { german: "der Pfeffer", english: "pepper" },
+        { german: "das Messer", english: "knife" },
+        { german: "der Teller", english: "plate" },
+        { german: "der Zucker", english: "sugar" }
+      ]
+    },
+    {
+      lessonId: "Lektion_14",
+      lessonName: "Lektion 14",
+      vocabulary: [
+        { german: "herunter", english: "down" },
+        { german: "der Hof", english: "yard" },
+        { german: "lösen", english: "solve" },
+        { german: "schimpfen", english: "scold" },
+        { german: "die Mülltonne", english: "trash can" },
+        { german: "ansprechen", english: "address someone" },
+        { german: "üben", english: "practice" },
+        { german: "der Briefkasten", english: "mail box" },
+        { german: "persönlich", english: "personal" },
+        { german: "lassen", english: "let, leave" },
+        { german: "die Hausnummer", english: "house number" },
+        { german: "hell", english: "light" },
+        { german: "der Umzug", english: "move" },
+        { german: "die Nachbarschaft", english: "neighborhood" },
+        { german: "genial", english: "genius" },
+        { german: "schwer", english: "heavy" },
+        { german: "aussuchen", english: "select" },
+        { german: "berühmt", english: "famous" },
+        { german: "das Dach", english: "roof" },
+        { german: "der Bewohner", english: "resident" },
+        { german: "damals", english: "back then" },
+        { german: "der Eingang", english: "entrance" },
+        { german: "die Unterhaltung", english: "conversation" },
+        { german: "der Keller", english: "basement" },
+        { german: "das Treppenhaus", english: "stairwell" },
+        { german: "spontan", english: "spontaneous" },
+        { german: "hilfsbereit", english: "helpful" },
+        { german: "die Garage", english: "garage" }
+      ]
+    },
+    {
+      lessonId: "Lektion_15",
+      lessonName: "Lektion 15",
+      vocabulary: [
+        { german: "raten", english: "to guess" },
+        { german: "das Gegenteil", english: "opposite" },
+        { german: "verliebt", english: "in love" },
+        { german: "die Krawatte", english: "tie" },
+        { german: "jeder", english: "every" },
+        { german: "verknallt", english: "have a crush" },
+        { german: "die Party", english: "party" },
+        { german: "das Interesse", english: "interest" },
+        { german: "das Gesicht", english: "face" },
+        { german: "das Date", english: "date" },
+        { german: "der Parkplatz", english: "parking spot" },
+        { german: "reich", english: "rich" },
+        { german: "elegant", english: "elegant" },
+        { german: "der Aufzug", english: "elevator" },
+        { german: "schief", english: "crooked" },
+        { german: "gelten", english: "to be valid" },
+        { german: "der Hausmeister", english: "janitor" },
+        { german: "drücken", english: "press" },
+        { german: "hübsch", english: "pretty" },
+        { german: "der Urlaub", english: "vacation" },
+        { german: "der Rat", english: "advice" },
+        { german: "das Lächeln", english: "smile" },
+        { german: "Vollzeit arbeiten", english: "work fulltime" },
+        { german: "niedrig", english: "low" },
+        { german: "die Regel", english: "rule" },
+        { german: "der Feierabend", english: "after work" },
+        { german: "duzen", english: "use du" },
+        { german: "das Ritual", english: "ritual" },
+        { german: "chaotisch", english: "chaotic" }
+      ]
+    },
+    {
+      lessonId: "Lektion_16",
+      lessonName: "Lektion 16",
+      vocabulary: [
+        { german: "die Stimmung", english: "mood, atmosphere" },
+        { german: "sich ärgern", english: "be annoyed" },
+        { german: "nervig", english: "annoying" },
+        { german: "wiedersehen", english: "see again" },
+        { german: "sich fühlen", english: "to feel" },
+        { german: "insgesamt", english: "overall" },
+        { german: "die Laune", english: "mood" },
+        { german: "sich unterhalten", english: "to chat" },
+        { german: "nerven", english: "to annoy" },
+        { german: "einschlafen", english: "fall asleep" },
+        { german: "sich beeilen", english: "to hurry" },
+        { german: "sich erinnern", english: "to remember" },
+        { german: "sich streiten", english: "to fight" },
+        { german: "sich beschweren", english: "to complain" },
+        { german: "der Streit", english: "fight" },
+        { german: "sich verlieben", english: "fall in love" },
+        { german: "der Mord", english: "murder" },
+        { german: "die Zeitschrift", english: "magazine" },
+        { german: "sich verstehen", english: "get along" },
+        { german: "aktuell", english: "current" },
+        { german: "der Krimi", english: "thriller" },
+        { german: "die Sorge", english: "worry" },
+        { german: "die Folge", english: "episode" },
+        { german: "das Hörbuch", english: "audio book" },
+        { german: "ständig", english: "all the time" },
+        { german: "tot", english: "dead" },
+        { german: "der Podcast", english: "podcast" },
+        { german: "sich treffen", english: "to meet up" },
+        { german: "die Hütte", english: "cabin" },
+        { german: "das Videospiel", english: "video game" }
+      ]
+    },
+    {
+      lessonId: "Lektion_17",
+      lessonName: "Lektion 17",
+      vocabulary: [
+        { german: "genervt sein", english: "be annoyed" },
+        { german: "gut gelaunt sein", english: "be in good mood" },
+        { german: "unsicher sein", english: "be insecure" },
+        { german: "achten auf", english: "pay attention to" },
+        { german: "die Zusammenarbeit", english: "teamwork" },
+        { german: "sich interessieren für", english: "be interested in" },
+        { german: "das Wissen", english: "knowledge" },
+        { german: "gegenseitig", english: "mutual" },
+        { german: "das Ergebnis", english: "result" },
+        { german: "frustriert sein", english: "be frustrated" },
+        { german: "tolerant sein", english: "be tolerant" },
+        { german: "sich kümmern um", english: "care for" },
+        { german: "bunt", english: "colorful" },
+        { german: "das Ziel", english: "goal" },
+        { german: "die Schlange", english: "snake" },
+        { german: "die Aufgabe", english: "task" },
+        { german: "entscheiden", english: "to decide" },
+        { german: "der Wunsch", english: "wish" },
+        { german: "sich einigen", english: "come to agreement" },
+        { german: "verteilen", english: "distribute" },
+        { german: "erzählen von", english: "tell about" },
+        { german: "träumen von", english: "dream of" },
+        { german: "sich erinnern an", english: "remember" },
+        { german: "warten auf", english: "wait for" },
+        { german: "enttäuscht sein von", english: "be disappointed" },
+        { german: "Angst haben vor", english: "be scared of" },
+        { german: "Lust haben auf", english: "feel like" },
+        { german: "zufrieden sein mit", english: "be content with" },
+        { german: "sich konzentrieren auf", english: "concentrate on" }
+      ]
+    },
+    {
+      lessonId: "Lektion_18",
+      lessonName: "Lektion 18",
+      vocabulary: [
+        { german: "entdecken", english: "discover" },
+        { german: "die Datei", english: "file" },
+        { german: "aufladen", english: "charge" },
+        { german: "bearbeiten", english: "edit" },
+        { german: "herunterladen", english: "download" },
+        { german: "mailen", english: "to email" },
+        { german: "recherchieren", english: "research" },
+        { german: "weiterleiten", english: "forward" },
+        { german: "heben", english: "lift" },
+        { german: "trotzdem", english: "despite" },
+        { german: "bequem", english: "comfortable" },
+        { german: "aufhören", english: "stop" },
+        { german: "überweisen", english: "transfer money" },
+        { german: "das Resultat", english: "result" },
+        { german: "wenigstens", english: "at least" },
+        { german: "die Plattform", english: "platform" },
+        { german: "die Diät", english: "diet" },
+        { german: "die Sucht", english: "addiction" },
+        { german: "das Thema", english: "topic" },
+        { german: "einschalten", english: "turn on" },
+        { german: "einchecken", english: "check in" },
+        { german: "anklicken", english: "click on" },
+        { german: "der Link", english: "link" }
+      ]
+    },
+    {
+      lessonId: "Lektion_19",
+      lessonName: "Lektion 19",
+      vocabulary: [
+        { german: "fangen", english: "catch" },
+        { german: "besichtigen", english: "visit" },
+        { german: "aufbleiben", english: "stay up" },
+        { german: "die Mitternacht", english: "midnight" },
+        { german: "die Zigarette", english: "cigarette" },
+        { german: "die Spritze", english: "injection" },
+        { german: "das Heimweh", english: "homesickness" },
+        { german: "das Gewissen", english: "conscience" },
+        { german: "das Feuer", english: "fire" },
+        { german: "der Liebeskummer", english: "love sickness" },
+        { german: "tätowieren", english: "tattoo" },
+        { german: "die Angel", english: "fishing rod" },
+        { german: "der Bundeskanzler", english: "chancellor" },
+        { german: "wahr", english: "true" },
+        { german: "das Pech", english: "bad luck" },
+        { german: "außer", english: "except" },
+        { german: "der Tanz", english: "dance" },
+        { german: "beantragen", english: "request" },
+        { german: "spenden", english: "donate" },
+        { german: "sich engagieren", english: "volunteer" },
+        { german: "teilnehmen", english: "participate" },
+        { german: "die Not", english: "hardship" }
+      ]
+    },
+    {
+      lessonId: "Lektion_20",
+      lessonName: "Lektion 20",
+      vocabulary: [
+        { german: "produzieren", english: "produce" },
+        { german: "stechen", english: "sting" },
+        { german: "die Tradition", english: "tradition" },
+        { german: "stundenlang", english: "for hours" },
+        { german: "vorbei an", english: "by, past" },
+        { german: "die Erde", english: "earth" },
+        { german: "der Bauernhof", english: "farm" },
+        { german: "das Tor", english: "gate, goal" },
+        { german: "besitzen", english: "own" },
+        { german: "der Besitzer", english: "owner" },
+        { german: "der Kasten", english: "box" },
+        { german: "die Steuer", english: "tax" },
+        { german: "ziehen", english: "pull, move" },
+        { german: "kündigen", english: "quit" },
+        { german: "mutig", english: "courageous" },
+        { german: "Kontakte knüpfen", english: "socialize" },
+        { german: "irgend-", english: "any-" },
+        { german: "sich verändern", english: "change" },
+        { german: "lebendig", english: "lively" },
+        { german: "sich anfühlen", english: "feel like" },
+        { german: "tagsüber", english: "during the day" }
+      ]
+    },
+    {
+      lessonId: "Lektion_21",
+      lessonName: "Lektion 21",
+      vocabulary: [
+        { german: "demonstrieren", english: "protest" },
+        { german: "der Klimawandel", english: "climate change" },
+        { german: "nachdenken", english: "think about" },
+        { german: "der Unsinn", english: "nonsense" },
+        { german: "vorgestern", english: "day before yesterday" },
+        { german: "der Schutz", english: "protection" },
+        { german: "schnell", english: "fast" },
+        { german: "weitermachen", english: "continue" },
+        { german: "gerecht", english: "just" },
+        { german: "verantwortlich", english: "responsible" },
+        { german: "inzwischen", english: "meanwhile" },
+        { german: "fair", english: "fair" },
+        { german: "widersprechen", english: "disagree" },
+        { german: "begründen", english: "justify" },
+        { german: "blockieren", english: "block" },
+        { german: "die Frisur", english: "hairstyle" },
+        { german: "verzichten auf", english: "forgo" },
+        { german: "sparen", english: "save money" },
+        { german: "vermeiden", english: "avoid" }
+      ]
+    },
+    {
+      lessonId: "Lektion_22",
+      lessonName: "Lektion 22",
+      vocabulary: [
+        { german: "der König", english: "king" },
+        { german: "die Zukunft", english: "future" },
+        { german: "glücklich", english: "happy" },
+        { german: "traurig", english: "sad" },
+        { german: "optimistisch", english: "optimistic" },
+        { german: "pessimistisch", english: "pessimistic" },
+        { german: "mutig", english: "courageous" },
+        { german: "ängstlich", english: "scared" },
+        { german: "entspannt", english: "relaxed" },
+        { german: "nervös", english: "nervous" },
+        { german: "stressig", english: "stressful" },
+        { german: "fröhlich", english: "cheerful" },
+        { german: "langweilig", english: "boring" },
+        { german: "spannend", english: "exciting" },
+        { german: "der Sinn", english: "sense" },
+        { german: "sozial", english: "social" },
+        { german: "das Engagement", english: "commitment" },
+        { german: "die Religion", english: "religion" },
+        { german: "der Umweltschutz", english: "environment protection" },
+        { german: "der Frieden", english: "peace" },
+        { german: "das Netzwerk", english: "network" },
+        { german: "wahrscheinlich", english: "probably" },
+        { german: "die Rente", english: "retirement" }
+      ]
+    },
+    {
+      lessonId: "Lektion_23",
+      lessonName: "Lektion 23",
+      vocabulary: [
+        { german: "sich bewegen", english: "move" },
+        { german: "die Nähmaschine", english: "sewing machine" },
+        { german: "vorne", english: "in front" },
+        { german: "der Elefant", english: "elephant" },
+        { german: "das Spielzeug", english: "toy" },
+        { german: "die Nadel", english: "needle" },
+        { german: "weich", english: "soft" },
+        { german: "der Stoff", english: "fabric" },
+        { german: "der Knopf", english: "button" },
+        { german: "die Geburt", english: "birth" },
+        { german: "erfahren", english: "experience" },
+        { german: "der Rollstuhl", english: "wheelchair" },
+        { german: "die Werkstatt", english: "workshop" },
+        { german: "mehrere", english: "multiple" },
+        { german: "einstellen", english: "hire" },
+        { german: "riesig", english: "huge" },
+        { german: "der Präsident", english: "president" },
+        { german: "beliebt", english: "popular" },
+        { german: "das Baby", english: "baby" },
+        { german: "der Praktikant", english: "intern" },
+        { german: "geboren", english: "born" },
+        { german: "die Klinik", english: "clinic" }
+      ]
+    },
+    {
+      lessonId: "Lektion_24",
+      lessonName: "Lektion 24",
+      vocabulary: [
+        { german: "offen", english: "open" },
+        { german: "das Kapitel", english: "chapter" },
+        { german: "realisieren", english: "realize" },
+        { german: "europäisch", english: "European" },
+        { german: "führen", english: "lead" },
+        { german: "pflegen", english: "take care of" },
+        { german: "überzeugt", english: "convinced" },
+        { german: "die Eröffnung", english: "opening" },
+        { german: "der Salon", english: "salon" },
+        { german: "dick", english: "thick, fat" },
+        { german: "die Dekoration", english: "decoration" },
+        { german: "der Getränkemarkt", english: "beverage store" },
+        { german: "die Kneipe", english: "bar" },
+        { german: "die Reinigung", english: "dry cleaner" },
+        { german: "das Schuhgeschäft", english: "shoe store" },
+        { german: "der Handyladen", english: "phone store" },
+        { german: "das Juweliergeschäft", english: "jeweler" },
+        { german: "der Optiker", english: "optometrist" },
+        { german: "die Boutique", english: "boutique" }
+      ]
+    }
+  ],
+  groups: [
+    { name: "B1 Lessons (1-6)", lessons: ["B1_Lektion_1", "B1_Lektion_2", "B1_Lektion_3", "B1_Lektion_4", "B1_Lektion_5", "B1_Lektion_6"] },
+    { name: "Lessons 13-24", lessons: ["Lektion_13", "Lektion_14", "Lektion_15", "Lektion_16", "Lektion_17", "Lektion_18", "Lektion_19", "Lektion_20", "Lektion_21", "Lektion_22", "Lektion_23", "Lektion_24"] }
+  ]
+};
+
+// State
+let selectedLessons = vocabularyData.lessons.map(l => l.lessonId);
+let cardIndex = 0;
+let cards = [];
+let showGerman = true;
+let matchPairs = 6;
+let matchTimer = null;
+let matchSeconds = 0;
+let matchMoves = 0;
+let matchFound = 0;
+let matchSelected = null;
+let quizCount = '10';
+let quizDirection = 'de-en';
+let quizQuestions = [];
+let quizIndex = 0;
+let quizScore = 0;
+let quizMissed = [];
+let typingCount = '10';
+let typingDirection = 'de-en';
+let typingQuestions = [];
+let typingIndex = 0;
+let typingScore = 0;
+let typingMissed = [];
+let typingAnswered = false;
+
+// Helpers
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function getSelectedVocab() {
+  return vocabularyData.lessons
+    .filter(l => selectedLessons.includes(l.lessonId))
+    .flatMap(l => l.vocabulary);
+}
+
+function updateSelectedInfo() {
+  const vocab = getSelectedVocab();
+  document.getElementById('totalWords').textContent = `${vocab.length} words`;
+  document.getElementById('selectedInfo').textContent = 
+    selectedLessons.length === vocabularyData.lessons.length ? 'All selected' : `${selectedLessons.length} lessons selected`;
+}
+
+// Navigation
+function showHome() {
+  document.querySelectorAll('.study-view').forEach(v => v.classList.remove('active'));
+  document.getElementById('homeView').style.display = 'block';
+}
+
+function startMode(mode) {
+  document.getElementById('homeView').style.display = 'none';
+  if (mode === 'flashcard') startFlashcards();
+  else if (mode === 'match') openMatchSettings();
+  else if (mode === 'quiz') openQuizSettings();
+  else if (mode === 'typing') openTypingSettings();
+}
+
+// Flashcards
+function startFlashcards() {
+  cards = shuffle(getSelectedVocab());
+  cardIndex = 0;
+  document.getElementById('flashcardView').classList.add('active');
+  document.getElementById('flashcardBadge').textContent = `${cards.length} words`;
+  document.getElementById('totalCards').textContent = cards.length;
+  renderCard();
+}
+
+function renderCard() {
+  const card = cards[cardIndex];
+  document.getElementById('flashcardFront').textContent = showGerman ? card.german : card.english;
+  document.getElementById('flashcardBack').textContent = showGerman ? card.english : card.german;
+  document.getElementById('flashcard').classList.remove('flipped');
+  document.getElementById('currentIndex').textContent = cardIndex + 1;
+  document.getElementById('progressFill').style.width = `${((cardIndex + 1) / cards.length) * 100}%`;
+  document.getElementById('prevBtn').disabled = cardIndex === 0;
+  document.getElementById('nextBtn').disabled = cardIndex === cards.length - 1;
+}
+
+function flipCard() { document.getElementById('flashcard').classList.toggle('flipped'); }
+function prevCard() { if (cardIndex > 0) { cardIndex--; renderCard(); } }
+function nextCard() { if (cardIndex < cards.length - 1) { cardIndex++; renderCard(); } }
+function shuffleCards() { cards = shuffle(cards); cardIndex = 0; renderCard(); }
+function toggleDirection() {
+  showGerman = !showGerman;
+  document.getElementById('directionText').textContent = showGerman ? 'DE → EN' : 'EN → DE';
+  renderCard();
+}
+
+// Match
+function openMatchSettings() { document.getElementById('matchSettingsModal').classList.add('active'); }
+function closeMatchSettings() { document.getElementById('matchSettingsModal').classList.remove('active'); if (!document.getElementById('matchView').classList.contains('active')) showHome(); }
+
+function startMatch() {
+  document.getElementById('matchSettingsModal').classList.remove('active');
+  const vocab = shuffle(getSelectedVocab()).slice(0, matchPairs);
+  const matchCards = shuffle([
+    ...vocab.map(w => ({ id: w.german, pair: w.german, text: w.german, lang: 'de' })),
+    ...vocab.map(w => ({ id: w.german, pair: w.german, text: w.english, lang: 'en' }))
+  ]);
+  
+  matchMoves = 0;
+  matchFound = 0;
+  matchSeconds = 0;
+  matchSelected = null;
+  
+  document.getElementById('matchView').classList.add('active');
+  document.getElementById('matchBadge').textContent = `${matchPairs} pairs`;
+  document.getElementById('matchPairs').textContent = '0';
+  document.getElementById('matchMoves').textContent = '0';
+  document.getElementById('matchTime').textContent = '0:00';
+  document.getElementById('matchComplete').classList.remove('active');
+  
+  document.getElementById('matchGrid').innerHTML = matchCards.map((c, i) => `
+    <div class="match-card" data-index="${i}" data-pair="${c.pair}" data-lang="${c.lang}" onclick="selectMatch(this)">
+      <span class="match-card-lang ${c.lang}">${c.lang.toUpperCase()}</span>
+      <span class="match-card-text">${c.text}</span>
+    </div>
+  `).join('');
+  
+  if (matchTimer) clearInterval(matchTimer);
+  matchTimer = setInterval(() => {
+    matchSeconds++;
+    const m = Math.floor(matchSeconds / 60);
+    const s = matchSeconds % 60;
+    document.getElementById('matchTime').textContent = `${m}:${s.toString().padStart(2, '0')}`;
+  }, 1000);
+}
+
+function selectMatch(el) {
+  if (el.classList.contains('matched') || el.classList.contains('selected')) return;
+  
+  if (!matchSelected) {
+    matchSelected = el;
+    el.classList.add('selected');
+    return;
+  }
+  
+  matchMoves++;
+  document.getElementById('matchMoves').textContent = matchMoves;
+  
+  const pair1 = matchSelected.dataset.pair;
+  const pair2 = el.dataset.pair;
+  const lang1 = matchSelected.dataset.lang;
+  const lang2 = el.dataset.lang;
+  
+  if (pair1 === pair2 && lang1 !== lang2) {
+    matchSelected.classList.remove('selected');
+    matchSelected.classList.add('correct');
+    el.classList.add('correct');
+    setTimeout(() => {
+      matchSelected.classList.add('matched');
+      el.classList.add('matched');
+      matchSelected = null;
+    }, 300);
+    matchFound++;
+    document.getElementById('matchPairs').textContent = matchFound;
+    if (matchFound === matchPairs) endMatch();
+  } else {
+    matchSelected.classList.remove('selected');
+    matchSelected.classList.add('incorrect');
+    el.classList.add('incorrect');
+    const prev = matchSelected;
+    setTimeout(() => {
+      prev.classList.remove('incorrect');
+      el.classList.remove('incorrect');
+    }, 500);
+    matchSelected = null;
+  }
+}
+
+function endMatch() {
+  clearInterval(matchTimer);
+  const m = Math.floor(matchSeconds / 60);
+  const s = matchSeconds % 60;
+  document.getElementById('finalTime').textContent = `${m}:${s.toString().padStart(2, '0')}`;
+  document.getElementById('finalMoves').textContent = matchMoves;
+  setTimeout(() => document.getElementById('matchComplete').classList.add('active'), 500);
+}
+
+// Quiz
+function openQuizSettings() { document.getElementById('quizSettingsModal').classList.add('active'); }
+function closeQuizSettings() { document.getElementById('quizSettingsModal').classList.remove('active'); if (!document.getElementById('quizView').classList.contains('active')) showHome(); }
+
+function startQuiz() {
+  document.getElementById('quizSettingsModal').classList.remove('active');
+  const vocab = shuffle(getSelectedVocab());
+  const count = quizCount === 'all' ? vocab.length : Math.min(parseInt(quizCount), vocab.length);
+  
+  quizQuestions = vocab.slice(0, count).map(word => {
+    const isDeToEn = quizDirection === 'de-en' || (quizDirection === 'mixed' && Math.random() > 0.5);
+    const prompt = isDeToEn ? word.german : word.english;
+    const answer = isDeToEn ? word.english : word.german;
+    const others = vocab.filter(w => w !== word);
+    const wrong = shuffle(others).slice(0, 3).map(w => isDeToEn ? w.english : w.german);
+    return { prompt, answer, options: shuffle([answer, ...wrong]), word };
+  });
+  
+  quizIndex = 0;
+  quizScore = 0;
+  quizMissed = [];
+  
+  document.getElementById('quizView').classList.add('active');
+  document.getElementById('quizBadge').textContent = `${quizQuestions.length} questions`;
+  document.getElementById('quizTotal').textContent = quizQuestions.length;
+  document.getElementById('quizResults').classList.remove('active');
+  document.getElementById('quizCard').style.display = 'block';
+  renderQuiz();
+}
+
+function renderQuiz() {
+  const q = quizQuestions[quizIndex];
+  document.getElementById('quizCurrent').textContent = quizIndex + 1;
+  document.getElementById('quizScore').textContent = `${quizScore} correct`;
+  document.getElementById('quizPrompt').textContent = q.prompt;
+  document.getElementById('quizProgressFill').style.width = `${((quizIndex + 1) / quizQuestions.length) * 100}%`;
+  document.getElementById('quizOptions').innerHTML = q.options.map((opt, i) => `
+    <button class="quiz-option" onclick="selectQuiz(this, '${opt.replace(/'/g, "\\'")}')">
+      <span class="quiz-option-num">${i + 1}</span>
+      <span class="quiz-option-text">${opt}</span>
+    </button>
+  `).join('');
+}
+
+function selectQuiz(el, selected) {
+  const q = quizQuestions[quizIndex];
+  const correct = selected === q.answer;
+  
+  document.querySelectorAll('.quiz-option').forEach(btn => {
+    btn.disabled = true;
+    if (btn.querySelector('.quiz-option-text').textContent === q.answer) btn.classList.add('correct');
+  });
+  
+  if (correct) quizScore++;
+  else { el.classList.add('incorrect'); quizMissed.push(q.word); }
+  
+  setTimeout(() => {
+    quizIndex++;
+    if (quizIndex < quizQuestions.length) renderQuiz();
+    else showQuizResults();
+  }, 800);
+}
+
+function showQuizResults() {
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('quizResults').classList.add('active');
+  const pct = Math.round((quizScore / quizQuestions.length) * 100);
+  document.getElementById('quizFinalScore').textContent = `${pct}%`;
+  let msg = 'Keep practicing!';
+  if (pct >= 90) msg = 'Excellent!';
+  else if (pct >= 70) msg = 'Good job!';
+  else if (pct >= 50) msg = 'Getting there!';
+  document.getElementById('quizMessage').textContent = msg;
+  
+  if (quizMissed.length > 0) {
+    document.getElementById('quizMissed').style.display = 'block';
+    document.getElementById('quizMissedList').innerHTML = quizMissed.map(w => 
+      `<div class="quiz-missed-item">${w.german} <span>— ${w.english}</span></div>`
+    ).join('');
+  } else {
+    document.getElementById('quizMissed').style.display = 'none';
+  }
+}
+
+// Typing
+function openTypingSettings() { document.getElementById('typingSettingsModal').classList.add('active'); }
+function closeTypingSettings() { document.getElementById('typingSettingsModal').classList.remove('active'); if (!document.getElementById('typingView').classList.contains('active')) showHome(); }
+
+function startTyping() {
+  document.getElementById('typingSettingsModal').classList.remove('active');
+  const vocab = shuffle(getSelectedVocab());
+  const count = typingCount === 'all' ? vocab.length : Math.min(parseInt(typingCount), vocab.length);
+  
+  typingQuestions = vocab.slice(0, count).map(word => {
+    const isDeToEn = typingDirection === 'de-en' || (typingDirection === 'mixed' && Math.random() > 0.5);
+    const prompt = isDeToEn ? word.german : word.english;
+    const answer = isDeToEn ? word.english : word.german;
+    return { prompt, answer, word, isDeToEn };
+  });
+  
+  typingIndex = 0;
+  typingScore = 0;
+  typingMissed = [];
+  typingAnswered = false;
+  
+  document.getElementById('typingView').classList.add('active');
+  document.getElementById('typingBadge').textContent = `${typingQuestions.length} questions`;
+  document.getElementById('typingTotal').textContent = typingQuestions.length;
+  document.getElementById('typingResults').classList.remove('active');
+  document.getElementById('typingCard').style.display = 'block';
+  renderTyping();
+}
+
+function renderTyping() {
+  const q = typingQuestions[typingIndex];
+  typingAnswered = false;
+  document.getElementById('typingCurrent').textContent = typingIndex + 1;
+  document.getElementById('typingScore').textContent = `${typingScore} correct`;
+  document.getElementById('typingPrompt').textContent = q.prompt;
+  document.getElementById('typingProgressFill').style.width = `${((typingIndex + 1) / typingQuestions.length) * 100}%`;
+  
+  const input = document.getElementById('typingInput');
+  input.value = '';
+  input.className = 'typing-input';
+  input.disabled = false;
+  input.focus();
+  
+  document.getElementById('typingFeedback').textContent = '';
+  document.getElementById('typingFeedback').className = 'typing-feedback';
+  document.getElementById('typingSubmit').textContent = 'Check Answer';
+}
+
+function insertUmlaut(char) {
+  const input = document.getElementById('typingInput');
+  if (input.disabled) return;
+  const start = input.selectionStart;
+  const end = input.selectionEnd;
+  const value = input.value;
+  input.value = value.slice(0, start) + char + value.slice(end);
+  input.selectionStart = input.selectionEnd = start + 1;
+  input.focus();
+}
+
+function submitTyping() {
+  if (typingAnswered) {
+    // Move to next question
+    typingIndex++;
+    if (typingIndex < typingQuestions.length) {
+      renderTyping();
+    } else {
+      showTypingResults();
+    }
+    return;
+  }
+  
+  const q = typingQuestions[typingIndex];
+  const input = document.getElementById('typingInput');
+  const userAnswer = input.value.trim().toLowerCase();
+  const correctAnswer = q.answer.toLowerCase();
+  
+  // Check for correct answer (allow for slight variations)
+  const isCorrect = userAnswer === correctAnswer || 
+                    normalizeAnswer(userAnswer) === normalizeAnswer(correctAnswer);
+  
+  typingAnswered = true;
+  input.disabled = true;
+  
+  const feedback = document.getElementById('typingFeedback');
+  
+  if (isCorrect) {
+    typingScore++;
+    input.className = 'typing-input correct';
+    feedback.className = 'typing-feedback correct';
+    feedback.textContent = 'Correct!';
+  } else {
+    input.className = 'typing-input incorrect';
+    feedback.className = 'typing-feedback incorrect';
+    feedback.textContent = `Correct answer: ${q.answer}`;
+    typingMissed.push(q.word);
+  }
+  
+  document.getElementById('typingScore').textContent = `${typingScore} correct`;
+  document.getElementById('typingSubmit').textContent = typingIndex < typingQuestions.length - 1 ? 'Next Question' : 'See Results';
+}
+
+function normalizeAnswer(str) {
+  // Normalize umlauts and common variations
+  return str
+    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+    .replace(/ae/g, 'ä').replace(/oe/g, 'ö').replace(/ue/g, 'ü')
+    .replace(/[^a-zäöüß\s]/gi, '')
+    .trim();
+}
+
+function showTypingResults() {
+  document.getElementById('typingCard').style.display = 'none';
+  document.getElementById('typingResults').classList.add('active');
+  const pct = Math.round((typingScore / typingQuestions.length) * 100);
+  document.getElementById('typingFinalScore').textContent = `${pct}%`;
+  let msg = 'Keep practicing!';
+  if (pct >= 90) msg = 'Excellent!';
+  else if (pct >= 70) msg = 'Good job!';
+  else if (pct >= 50) msg = 'Getting there!';
+  document.getElementById('typingMessage').textContent = msg;
+  
+  if (typingMissed.length > 0) {
+    document.getElementById('typingMissed').style.display = 'block';
+    document.getElementById('typingMissedList').innerHTML = typingMissed.map(w => 
+      `<div class="quiz-missed-item">${w.german} <span>— ${w.english}</span></div>`
+    ).join('');
+  } else {
+    document.getElementById('typingMissed').style.display = 'none';
+  }
+}
+
+// Lesson selector
+function openLessonSelector() { renderLessons(); document.getElementById('lessonModal').classList.add('active'); }
+function closeLessonSelector() { document.getElementById('lessonModal').classList.remove('active'); }
+
+function renderLessons() {
+  document.getElementById('lessonGroups').innerHTML = vocabularyData.groups.map(g => {
+    const lessons = vocabularyData.lessons.filter(l => g.lessons.includes(l.lessonId));
+    return `
+      <div class="lesson-group">
+        <div class="lesson-group-header">
+          <span class="lesson-group-title">${g.name}</span>
+          <button class="lesson-group-toggle" onclick="toggleGroup('${g.name}')">Toggle</button>
+        </div>
+        <div class="lesson-chips">
+          ${lessons.map(l => `
+            <button class="lesson-chip ${selectedLessons.includes(l.lessonId) ? 'selected' : ''}" onclick="toggleLesson('${l.lessonId}')">
+              ${l.lessonName}
+              <span class="lesson-chip-count">${l.vocabulary.length}</span>
+            </button>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function toggleLesson(id) {
+  selectedLessons = selectedLessons.includes(id) 
+    ? selectedLessons.filter(l => l !== id) 
+    : [...selectedLessons, id];
+  renderLessons();
+  updateSelectedInfo();
+}
+
+function toggleGroup(name) {
+  const g = vocabularyData.groups.find(x => x.name === name);
+  const all = g.lessons.every(id => selectedLessons.includes(id));
+  if (all) selectedLessons = selectedLessons.filter(id => !g.lessons.includes(id));
+  else g.lessons.forEach(id => { if (!selectedLessons.includes(id)) selectedLessons.push(id); });
+  renderLessons();
+  updateSelectedInfo();
+}
+
+function selectAllLessons() {
+  selectedLessons = vocabularyData.lessons.map(l => l.lessonId);
+  renderLessons();
+  updateSelectedInfo();
+}
+
+function deselectAllLessons() {
+  selectedLessons = [];
+  renderLessons();
+  updateSelectedInfo();
+}
+
+// Init
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('#matchPairOptions .settings-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#matchPairOptions .settings-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      matchPairs = parseInt(btn.dataset.pairs);
+    });
+  });
+  
+  document.querySelectorAll('#quizCountOptions .settings-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#quizCountOptions .settings-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      quizCount = btn.dataset.count;
+    });
+  });
+  
+  document.querySelectorAll('#quizDirOptions .settings-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#quizDirOptions .settings-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      quizDirection = btn.dataset.dir;
+    });
+  });
+  
+  document.querySelectorAll('#typingCountOptions .settings-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#typingCountOptions .settings-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      typingCount = btn.dataset.count;
+    });
+  });
+  
+  document.querySelectorAll('#typingDirOptions .settings-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#typingDirOptions .settings-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      typingDirection = btn.dataset.dir;
+    });
+  });
+  
+  document.querySelectorAll('.modal-backdrop').forEach(m => {
+    m.addEventListener('click', e => { if (e.target === m) m.classList.remove('active'); });
+  });
+  
+  document.addEventListener('keydown', e => {
+    if (document.getElementById('flashcardView').classList.contains('active')) {
+      if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); flipCard(); }
+      else if (e.code === 'ArrowLeft') prevCard();
+      else if (e.code === 'ArrowRight') nextCard();
+    }
+    if (document.getElementById('typingView').classList.contains('active')) {
+      if (e.code === 'Enter') { e.preventDefault(); submitTyping(); }
+    }
+  });
+  
+  updateSelectedInfo();
+});
+  </script>
+</body>
+</html>
