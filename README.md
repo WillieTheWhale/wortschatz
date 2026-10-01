@@ -21,7 +21,7 @@ A single-page vocabulary study app for German B1 learners. Built with vanilla HT
 
 ## Usage
 
-Open `wortschatz.html` in any modern browser. No server or build step required.
+Open `index.html` in any modern browser. No server or build step required.
 
 ## Lessons
 
